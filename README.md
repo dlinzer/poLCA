@@ -43,7 +43,7 @@ poLCA is distributed through the Comprehensive R Archive Network, [CRAN](http://
 
 ## Documentation
 
-[Download user's manual (PDF)](doc/poLCA-manual-1-4.pdf). The package is also documented internally upon installation.  For help in [R][], type
+[Download user's manual (PDF)](doc/poLCA-manual-1-4.pdf?raw=true). The package is also documented internally upon installation.  For help in [R][], type
 
 ```R
 ?poLCA
