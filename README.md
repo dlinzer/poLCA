@@ -1,0 +1,70 @@
+# poLCA
+
+### Polytomous Variable Latent Class Analysis
+
+[poLCA][] is an R package for the estimation of latent class models and latent class regression models for polytomous outcome variables, implemented in the [R][] statistical computing environment.
+
+Latent class analysis (also known as latent structure analysis) can be used to identify clusters of similar "types" of individuals or observations from multivariate categorical data, estimating the characteristics of these latent groups, and returning the probability that each observation belongs to each group. These models are also helpful in investigating sources of confounding and nonindependence among a set of categorical variables, as well as for density estimation in cross-classification tables. Typical applications include the analysis of opinion surveys; rater agreement; lifestyle and consumer choice; and other social and behavioral phenomena.
+
+The basic latent class model is a finite mixture model in which the component distributions are assumed to be multi-way cross-classification tables with all variables mutually independent. The model stratifies the observed data by a theoretical latent categorical variable, attempting to eliminate any spurious relationships between the observed variables. The latent class regression model makes it possible for the researcher to further estimate the effects of covariates (or "concomitant" variables) on predicting latent class membership.
+
+poLCA uses expectation-maximization and Newton-Raphson algorithms to find maximum likelihood estimates of the parameters of the latent class and latent class regression models.
+
+
+## Package authors
+
+[Drew A. Linzer](http://userwww.service.emory.edu/~dlinzer)  
+Department of Political Science  
+Emory University  
+
+[Jeffrey Lewis](http://www.sscnet.ucla.edu/polisci/faculty/lewis)  
+Department of Political Science  
+University of California, Los Angeles  
+
+
+## Installation
+
+To install the package directly through [R][], type
+
+```R
+install.packages("poLCA", dependencies = TRUE)
+```
+
+and select a CRAN mirror.  Once the installation is complete, enter
+
+```R
+library(poLCA)
+```
+
+to load the package into memory for use.
+
+poLCA is distributed through the Comprehensive R Archive Network, [CRAN](http://cran.r-project.org), and appears in Task Views for [Cluster Analysis & Finite Mixture Models](http://cran.r-project.org/web/views/Cluster.html), [Multivariate Statistics](http://cran.r-project.org/web/views/Multivariate.html), and [Psychometric Models and Methods](http://cran.r-project.org/web/views/Psychometrics.html). poLCA is provided free of charge, subject to version 2 of the GPL or any later version. 
+
+
+## Documentation
+
+[Download user's manual (PDF)](doc/poLCA-manual-1-4.pdf). The package is also documented internally upon installation.  For help in [R][], type
+
+```R
+?poLCA
+```
+
+
+## Citation
+
+Users of poLCA are requested to cite the software package as:
+
+Linzer, Drew A. and Jeffrey Lewis. 2013. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.4. https://github.com/dlinzer/poLCA.
+
+and
+
+Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Variable Latent Class Analysis." Journal of Statistical Software. 42(10): 1-29. http://www.jstatsoft.org/v42/i10
+
+
+## Contact 
+
+Please direct all inquiries, comments, and reports of bugs to dlinzer@emory.edu.
+
+
+[poLCA]: https://github.com/dlinzer/poLCA
+[R]: http://cran.r-project.org
