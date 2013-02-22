@@ -2,7 +2,7 @@
 
 ### Polytomous Variable Latent Class Analysis
 
-[poLCA][] is an R package for the estimation of latent class models and latent class regression models for polytomous outcome variables, implemented in the [R][] statistical computing environment.
+[poLCA][] is a software package for the estimation of latent class models and latent class regression models for polytomous outcome variables, implemented in the [R][] statistical computing environment.
 
 Latent class analysis (also known as latent structure analysis) can be used to identify clusters of similar "types" of individuals or observations from multivariate categorical data, estimating the characteristics of these latent groups, and returning the probability that each observation belongs to each group. These models are also helpful in investigating sources of confounding and nonindependence among a set of categorical variables, as well as for density estimation in cross-classification tables. Typical applications include the analysis of opinion surveys; rater agreement; lifestyle and consumer choice; and other social and behavioral phenomena.
 
