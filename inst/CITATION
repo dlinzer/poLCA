@@ -1,0 +1,20 @@
+citHeader("To cite poLCA in publications use:")
+
+citEntry(entry = "Article",
+  title        = "{poLCA}: An {R} Package for Polytomous Variable Latent Class Analysis",
+  author       = personList(as.person("Drew A. Linzer"),
+                   as.person("Jeffrey B. Lewis")),
+  journal      = "Journal of Statistical Software",
+  year         = "2011",
+  volume       = "42",
+  number       = "10",
+  pages        = "1--29",
+  url          = "http://www.jstatsoft.org/v42/i10/",
+
+  textVersion  =
+  paste("Drew A. Linzer, Jeffrey B. Lewis (2011).",
+        "poLCA: An R Package for Polytomous Variable Latent Class Analysis.",
+        "Journal of Statistical Software, 42(10), 1-29.",
+        "URL http://www.jstatsoft.org/v42/i10/.")
+)
+
