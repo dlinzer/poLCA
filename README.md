@@ -38,7 +38,9 @@ library(poLCA)
 
 to load the package into memory for use.
 
-poLCA is distributed through the Comprehensive R Archive Network, [CRAN](http://cran.r-project.org), and appears in Task Views for [Cluster Analysis & Finite Mixture Models](http://cran.r-project.org/web/views/Cluster.html), [Multivariate Statistics](http://cran.r-project.org/web/views/Multivariate.html), and [Psychometric Models and Methods](http://cran.r-project.org/web/views/Psychometrics.html). poLCA is provided free of charge, subject to version 2 of the GPL or any later version. 
+poLCA is distributed through the Comprehensive R Archive Network, [CRAN](http://cran.r-project.org).  The compiled package source and MacOS and Windows binary files can be downloaded from http://cran.r-project.org/web/packages/poLCA.
+
+The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixture Models](http://cran.r-project.org/web/views/Cluster.html), [Multivariate Statistics](http://cran.r-project.org/web/views/Multivariate.html), and [Psychometric Models and Methods](http://cran.r-project.org/web/views/Psychometrics.html). poLCA is provided free of charge, subject to version 2 of the GPL or any later version. 
 
 
 ## Documentation
