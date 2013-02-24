@@ -45,7 +45,7 @@ The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixt
 
 ## Documentation
 
-[Download user's manual (PDF)](doc/poLCA-manual-1-4.pdf?raw=true). The package is also documented internally upon installation.  For help in [R][], type
+[Download user's manual (PDF)](inst/doc/poLCA-manual-1-4.pdf?raw=true). The package is also documented internally upon installation.  For help in [R][], type
 
 ```R
 ?poLCA
