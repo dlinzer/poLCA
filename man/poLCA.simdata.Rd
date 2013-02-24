@@ -32,10 +32,8 @@ poLCA.simdata(N = 5000, probs = NULL, nclass = 2, ndv = 4,
 }
 \seealso{\code{\link{poLCA}}}
 \examples{
-##
-## Create a sample data set with 3 classes and no covariates 
-## and run poLCA to recover the specified parameters.
-##
+# Create a sample data set with 3 classes and no covariates 
+# and run poLCA to recover the specified parameters.
 probs <- list(matrix(c(0.6,0.1,0.3,     0.6,0.3,0.1,     0.3,0.1,0.6    ),ncol=3,byrow=TRUE), # conditional resp prob to Y1
               matrix(c(0.2,0.8,         0.7,0.3,         0.3,0.7        ),ncol=2,byrow=TRUE), # conditional resp prob to Y2
               matrix(c(0.3,0.6,0.1,     0.1,0.3,0.6,     0.3,0.6,0.1    ),ncol=3,byrow=TRUE), # conditional resp prob to Y3
@@ -46,39 +44,15 @@ f1 <- cbind(Y1,Y2,Y3,Y4,Y5)~1
 lc1 <- poLCA(f1,simdat$dat,nclass=3)
 table(lc1$predclass,simdat$trueclass)
 
-##
-## Create a sample dataset with 2 classes and three covariates.
-## Then compare predicted class memberships when the model is 
-## estimated "correctly" with covariates to when it is estimated
-## "incorrectly" without covariates.
-##
+# Create a sample dataset with 2 classes and three covariates.
+# Then compare predicted class memberships when the model is 
+# estimated "correctly" with covariates to when it is estimated
+# "incorrectly" without covariates.
 simdat2 <- poLCA.simdata(N=1000,ndv=7,niv=3,nclass=2,b=matrix(c(1,-2,1,-1)))
 f2a <- cbind(Y1,Y2,Y3,Y4,Y5,Y6,Y7)~X1+X2+X3
 lc2a <- poLCA(f2a,simdat2$dat,nclass=2)
 f2b <- cbind(Y1,Y2,Y3,Y4,Y5,Y6,Y7)~1
 lc2b <- poLCA(f2b,simdat2$dat,nclass=2)
 table(lc2a$predclass,lc2b$predclass)
-
-##
-## Create a sample dataset with missing values and estimate the
-## latent class model including and excluding the missing values.
-## Then plot the estimated class-conditional outcome response 
-## probabilities against each other for the two methods.
-##
-simdat3 <- poLCA.simdata(N=2500,niv=2,ndv=5,nclass=3,
-            b=matrix(c(-1,2,-3,1,-2,2),3,2),missval=TRUE,pctmiss=0.2)
-f3 <- cbind(Y1,Y2,Y3,Y4,Y5)~X1+X2
-lc3.miss <- poLCA(f3,simdat3$dat,nclass=3,verbose=FALSE)
-probs.start.new <- poLCA.reorder(lc3.miss$probs.start,order(lc3.miss$P))
-lc3.miss <- poLCA(f3,simdat3$dat,nclass=3,probs.start=probs.start.new)
-
-lc3.nomiss <- poLCA(f3,simdat3$dat,nclass=3,verbose=FALSE,na.rm=FALSE)
-probs.start.new <- poLCA.reorder(lc3.nomiss$probs.start,order(lc3.nomiss$P))
-lc3.nomiss <- poLCA(f3,simdat3$dat,nclass=3,na.rm=FALSE,probs.start=probs.start.new)
-
-plot(unlist(lc3.miss$probs),unlist(lc3.nomiss$probs),xlim=c(0,1),ylim=c(0,1),
-     xlab="Conditional response probabilities (missing values dropped)",
-     ylab="Conditional response probabilities (missing values included)")
-abline(0,1,lty=3)
 }
 \keyword{methods}

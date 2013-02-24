@@ -19,11 +19,7 @@ The data set also includes potential covariates \code{VOTE3}, the respondent's 2
 \format{A data frame with 1785 observations on 17 survey variables.  Of these, 1311 individuals provided responses on all twelve candidate evaluations.}
 \source{The National Election Studies (\url{http://www.electionstudies.org}). THE 2000 NATIONAL ELECTION STUDY [dataset]. Ann Arbor, MI: University of Michigan, Center for Political Studies [producer and distributor].}
 \examples{
-##
-## 2000 American National Election Study analysis
-##
-## Example 1. Latent class models with one (loglinear independence) to three classes.
-##
+# Latent class models with one (loglinear independence) to three classes
 data(election)
 f <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
            MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~1
@@ -31,9 +27,7 @@ nes1 <- poLCA(f,election,nclass=1)  # log-likelihood: -18647.31
 nes2 <- poLCA(f,election,nclass=2)  # log-likelihood: -17344.92
 nes3 <- poLCA(f,election,nclass=3)  # log-likelihood: -16714.66
 
-##
-## Example 2. Three-class model with a single covariate (party, age).
-##
+# Three-class model with a single covariate (party)
 f2a <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
              MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~PARTY
 nes2a <- poLCA(f2a,election,nclass=3,nrep=5)    # log-likelihood: -16222.32 
@@ -46,47 +40,5 @@ matplot(c(1:7),(cbind(1,exb)/(1+rowSums(exb))),ylim=c(0,1),type="l",
 text(5.9,0.35,"Other")
 text(5.4,0.7,"Bush affinity")
 text(1.8,0.6,"Gore affinity")
-
-f2b <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
-             MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~AGE
-nes2b <- poLCA(f2b,election,nclass=3,nrep=5)    # log-likelihood: -16625.96 
-agemat <- cbind(1,c(18:90))
-exb <- exp(agemat \%*\% nes2b$coeff)
-matplot(c(18:90),(cbind(1,exb)/(1+rowSums(exb))),ylim=c(0,1),type="l",
-    main="Age as a predictor of candidate affinity class",
-    xlab="Age",
-    ylab="Probability of latent class membership",lwd=2,col=1)
-text(30,0.55,"Other")
-text(30,0.33,"Bush affinity")
-text(30,0.17,"Gore affinity")
-
-##
-## Example 3. Three-class model with covariates 
-## age, education, and age*education interaction.
-## Graph shows predicted class probabilities by age, 
-## for high-school grads versus college grads.
-##
-f3 <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
-            MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~AGE*EDUC
-nes3cov <- poLCA(f3,election,nclass=3,nrep=5)   # log-likelihood: -16601.04
-predmat <- list()
-for (i in 1:3) {
-    predmat[[i]] <- matrix(NA,nrow=73,ncol=2)
-    ivmat.HS <- cbind(1,c(18:90),3,(c(18:90)*3))
-    ivmat.COLL <- cbind(1,c(18:90),6,(c(18:90)*6))
-    exb.HS <- exp(ivmat.HS \%*\% nes3cov$coeff)
-    exb.COLL <- exp(ivmat.COLL \%*\% nes3cov$coeff)
-    predmat[[i]][,1] <- (cbind(1,exb.HS)/(1+rowSums(exb.HS)))[,i]
-    predmat[[i]][,2] <- (cbind(1,exb.COLL)/(1+rowSums(exb.COLL)))[,i]
-}
-matplot(c(18:90),predmat[[1]],ylim=c(0.1,0.6),type="l",lty=c(1,2),col="blue",
-    main="Age and Education as predictors of candidate affinity class",
-    xlab="Age",
-    ylab="Probability of latent class membership",lwd=2)
-matplot(c(18:90),predmat[[2]],type="l",lty=c(1,2),col="red",lwd=2,add=TRUE)
-matplot(c(18:90),predmat[[3]],type="l",lty=c(1,2),col="limegreen",lwd=2,add=TRUE)
-text(27,0.55,"HS: Other"); text(23,0.49,"College:\n Other")
-text(27,0.32,"HS: Bush affinity"); text(31,0.27,"College:\n Bush affinity")
-text(27,0.15,"HS: Gore affinity"); text(22,0.235,"College:\n Gore affinity")
 }
 \keyword{datasets}
