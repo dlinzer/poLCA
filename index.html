@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>poLCA by dlinzer</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>poLCA</h1>
+        <p>Polytomous Variable Latent Class Analysis (R package)</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/dlinzer/poLCA" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/dlinzer/poLCA/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/dlinzer/poLCA/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>Overview</h2>
+
+<p><a href="https://github.com/dlinzer/poLCA">poLCA</a> is a software package for the estimation of latent class models and latent class regression models for polytomous outcome variables, implemented in the <a href="http://cran.r-project.org">R</a> statistical computing environment.</p>
+
+<p>Latent class analysis (also known as latent structure analysis) can be used to identify clusters of similar "types" of individuals or observations from multivariate categorical data, estimating the characteristics of these latent groups, and returning the probability that each observation belongs to each group. These models are also helpful in investigating sources of confounding and nonindependence among a set of categorical variables, as well as for density estimation in cross-classification tables. Typical applications include the analysis of opinion surveys; rater agreement; lifestyle and consumer choice; and other social and behavioral phenomena.</p>
+
+<p>The basic latent class model is a finite mixture model in which the component distributions are assumed to be multi-way cross-classification tables with all variables mutually independent. The model stratifies the observed data by a theoretical latent categorical variable, attempting to eliminate any spurious relationships between the observed variables. The latent class regression model makes it possible for the researcher to further estimate the effects of covariates (or "concomitant" variables) on predicting latent class membership.</p>
+
+<p>poLCA uses expectation-maximization and Newton-Raphson algorithms to find maximum likelihood estimates of the parameters of the latent class and latent class regression models.</p>
+
+<h2>Package authors</h2>
+
+<p><a href="http://userwww.service.emory.edu/%7Edlinzer">Drew A. Linzer</a><br>
+Department of Political Science<br>
+Emory University  </p>
+
+<p><a href="http://www.sscnet.ucla.edu/polisci/faculty/lewis">Jeffrey Lewis</a><br>
+Department of Political Science<br>
+University of California, Los Angeles  </p>
+
+<h2>Installation</h2>
+
+<p>To install the package directly through <a href="http://cran.r-project.org">R</a>, type</p>
+
+<div class="highlight"><pre>install.packages<span class="p">(</span><span class="s">"poLCA"</span><span class="p">,</span> dependencies <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+<p>and select a CRAN mirror.  Once the installation is complete, enter</p>
+
+<div class="highlight"><pre>library<span class="p">(</span>poLCA<span class="p">)</span>
+</pre></div>
+
+<p>to load the package into memory for use.</p>
+
+<p>poLCA is distributed through the Comprehensive R Archive Network, <a href="http://cran.r-project.org">CRAN</a>.  The compiled package source and MacOS and Windows binary files can be downloaded from <a href="http://cran.r-project.org/web/packages/poLCA">http://cran.r-project.org/web/packages/poLCA</a>.</p>
+
+<p>The poLCA package appears in CRAN Task Views for <a href="http://cran.r-project.org/web/views/Cluster.html">Cluster Analysis &amp; Finite Mixture Models</a>, <a href="http://cran.r-project.org/web/views/Multivariate.html">Multivariate Statistics</a>, and <a href="http://cran.r-project.org/web/views/Psychometrics.html">Psychometric Models and Methods</a>. poLCA is provided free of charge, subject to version 2 of the GPL or any later version. </p>
+
+<h2>Documentation</h2>
+
+<p><a href="inst/doc/poLCA-manual-1-4.pdf?raw=true">Download user's manual (PDF)</a>. The package is also documented internally upon installation.  For help in <a href="http://cran.r-project.org">R</a>, type</p>
+
+<div class="highlight"><pre>?poLCA
+</pre></div>
+
+<h2>Citation</h2>
+
+<p>Users of poLCA are requested to cite the software package as:</p>
+
+<blockquote>
+<p>Linzer, Drew A. and Jeffrey Lewis. 2013. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.4. <a href="https://github.com/dlinzer/poLCA">https://github.com/dlinzer/poLCA</a>.</p>
+</blockquote>
+
+<p>and</p>
+
+<blockquote>
+<p>Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Variable Latent Class Analysis." Journal of Statistical Software. 42(10): 1-29. <a href="http://www.jstatsoft.org/v42/i10">http://www.jstatsoft.org/v42/i10</a></p>
+</blockquote>
+
+<h2>Contact</h2>
+
+<p>Please direct all inquiries, comments, and reports of bugs to <a href="mailto:dlinzer@emory.edu">dlinzer@emory.edu</a>.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/dlinzer">dlinzer</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
