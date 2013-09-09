@@ -13,13 +13,9 @@ poLCA uses expectation-maximization and Newton-Raphson algorithms to find maximu
 
 ## Package authors
 
-[Drew A. Linzer](http://userwww.service.emory.edu/~dlinzer)  
-Department of Political Science  
-Emory University  
+[Drew A. Linzer](http://votamatic.org/about-me)  
 
 [Jeffrey Lewis](http://www.sscnet.ucla.edu/polisci/faculty/lewis)  
-Department of Political Science  
-University of California, Los Angeles  
 
 
 ## Installation
@@ -65,8 +61,8 @@ Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Var
 
 ## Contact 
 
-Please direct all inquiries, comments, and reports of bugs to dlinzer@emory.edu.
+Please direct all inquiries, comments, and reports of bugs to drew@votamatic.org.
 
 
-[poLCA]: https://github.com/dlinzer/poLCA
+[poLCA]: http://dlinzer.github.io/poLCA
 [R]: http://cran.r-project.org
