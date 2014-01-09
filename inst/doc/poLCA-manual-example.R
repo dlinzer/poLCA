@@ -1,21 +1,17 @@
 ##
 ## Drew A. Linzer
-## Emory Univeristy
-## Department of Political Science
-## dlinzer@emory.edu
+## drew@votamatic.org
 ##
 ## Jeffrey B. Lewis
-## University of California, Los Angeles
-## Department of Political Science
-## jblewis@polisci.ucla.edu
+## jblewis@ucla.edu
 ##
-## February 21, 2013
+## January 9, 2014
 ##
 ## poLCA: Polytomous variable Latent Class Analysis
 ##
 ## Commands to produce examples in user's manual, located at
 ##
-##      https://github.com/dlinzer/poLCA
+##      http://dlinzer.github.io/poLCA
 ##
 
 library(poLCA)
@@ -79,12 +75,12 @@ lc3 <- poLCA(f,carcinoma,nclass=3,graphs=T,maxiter=400)
 
 data(election)
 
-##
 ## one covariate
-##
 
-f.party <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~PARTY
-nes.party <- poLCA(f.party,election,nclass=3,verbose=F)       # log-likelihood: -16222.32
+f.party <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
+                 MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~PARTY
+nes.party <- poLCA(f.party,election,nclass=3,verbose=F)
+# log-likelihood: -16222.32
 
 probs.start <- poLCA.reorder(nes.party$probs.start,order(nes.party$P,decreasing=T))
 nes.party <- poLCA(f.party,election,nclass=3,probs.start=probs.start)
@@ -101,12 +97,12 @@ text(5.9,0.35,"Other")
 text(5.4,0.7,"Bush affinity")
 text(1.8,0.6,"Gore affinity")
 
-##
 ## multiple covariates
-##
 
-f.3cov <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~PARTY*AGE
-nes.3cov <- poLCA(f.3cov,election,nclass=3,verbose=F)          # log-likelihood: -16135.39 
+f.3cov <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,
+                MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB)~PARTY*AGE
+nes.3cov <- poLCA(f.3cov,election,nclass=3,verbose=F)
+# log-likelihood: -16135.39 
 
 probs.start <- poLCA.reorder(nes.3cov$probs.start,order(nes.3cov$P,decreasing=T))
 nes.3cov <- poLCA(f.3cov,election,nclass=3,probs.start=probs.start)
