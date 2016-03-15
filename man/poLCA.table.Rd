@@ -6,7 +6,7 @@
 \arguments{
   \item{formula}{A formula expression of the form \code{variable ~ 1} for a one-way frequency distribution, or \code{row ~ column} for two way-tables.}
   \item{condition}{A list containing the values of the manifest variables to hold fixed when creating the table specified by the \code{formula} argument. Setting this to an empty list, \code{condition=list()}, conditions on none of the other manifest variables, producing the marginal frequencies.}
-  \item{lc}{A model object previously estimated using the \code{poLCA} function.}
+  \item{lc}{A model object previously estimated using the \code{\link{poLCA}} function.}
 }
 \details{
 This function outputs predicted cell counts for user-specified combinations of the manifest variables, based on a latent class model estimated by the \code{\link{poLCA}} function.  The \code{predcell} table outputted automatically by \code{poLCA} also contains predicted cell frequencies, but only for cells containing at least one observation.  In contrast, \code{poLCA.table} will calculate predicted cell counts for all cells, including those with zero observations.

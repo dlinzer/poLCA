@@ -37,7 +37,7 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{probs.se}{standard errors of estimated class-conditional response probabilities, in the same format as \code{probs}.}
 \item{P}{sizes of each latent class; equal to the mixing proportions in the basic latent class model, or the mean of the priors in the latent class regression model.}
 \item{P.se}{the standard errors of the estimated \code{P}.}
-\item{posterior}{matrix of posterior class membership probabilities; also see function \code{link{poLCA.posterior}}.}
+\item{posterior}{matrix of posterior class membership probabilities; also see function \code{\link{poLCA.posterior}}.}
 \item{predclass}{vector of predicted class memberships, by modal assignment.}
 \item{predcell}{table of observed versus predicted cell counts for cases with no missing values; also see functions \code{\link{poLCA.table}} and \code{\link{poLCA.predcell}}.}
 \item{llik}{maximum value of the log-likelihood.}

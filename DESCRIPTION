@@ -1,8 +1,8 @@
 Package: poLCA
 Type: Package
 Title: Polytomous variable Latent Class Analysis
-Version: 1.4.1
-Date: 2014-01-09
+Version: 1.4.2
+Date: 2016-02-01
 Author: Drew Linzer <drew@votamatic.org>, 
         Jeffrey Lewis <jblewis@ucla.edu>.
 Maintainer: Drew Linzer <drew@votamatic.org>
