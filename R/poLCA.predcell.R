@@ -18,7 +18,7 @@ function(lc,y) {
     if (trap) {
         invisible(NULL)
     } else {
-        ret <- poLCA.ylik.C(poLCA.vectorize(lc$probs),y) %*% lc$P
+        ret <- (poLCA.ylik.C(poLCA.vectorize(lc$probs),y)/.Machine$double.xmax) %*% lc$P
         return(ret)
     }
 }
