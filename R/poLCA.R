@@ -44,7 +44,7 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
         ret$probs.start <- ret$probs
         ret$P <- 1
         ret$posterior <- ret$predclass <- prior <- matrix(1,nrow=N,ncol=1)
-        ret$llik <- sum(log(poLCA.ylik.C(poLCA.vectorize(ret$probs),y)))
+        ret$llik <- sum(log(poLCA.ylik.C(poLCA.vectorize(ret$probs),y)) - log(.Machine$double.xmax))
         if (calc.se) {
             se <- poLCA.se(y,x,ret$probs,prior,ret$posterior)
             ret$probs.se <- se$probs           # standard errors of class-conditional response probabilities
@@ -106,7 +106,7 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
                     } else {
                         prior <- matrix(colMeans(rgivy),nrow=N,ncol=R,byrow=TRUE)
                     }
-                    llik[iter] <- sum(log(rowSums(prior*poLCA.ylik.C(vp,y))))
+                    llik[iter] <- sum(log(rowSums(prior*poLCA.ylik.C(vp,y))) - log(.Machine$double.xmax))
                     dll <- llik[iter]-llik[iter-1]
                     if (is.na(dll)) {
                         error <- TRUE
@@ -170,11 +170,12 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
         datacell <- compy$datamat
         rownames(datacell) <- NULL
         freq <- compy$freq
+	ylik <- poLCA.ylik.C(poLCA.vectorize(ret$probs),datacell) 
         if (!na.rm) {
-            fit <- matrix(ret$Nobs * (poLCA.ylik.C(poLCA.vectorize(ret$probs),datacell) %*% ret$P))
+            fit <- matrix(ret$Nobs/.Machine$double.xmax * (ylik  %*% ret$P))
             ret$Chisq <- sum((freq-fit)^2/fit) + (ret$Nobs-sum(fit)) # Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables
         } else {
-            fit <- matrix(N * (poLCA.ylik.C(poLCA.vectorize(ret$probs),datacell) %*% ret$P))
+            fit <- matrix(N/.Machine$double.xmax * (ylik %*% ret$P))
             ret$Chisq <- sum((freq-fit)^2/fit) + (N-sum(fit))
         }
         ret$predcell <- data.frame(datacell,observed=freq,expected=round(fit,3)) # Table that gives observed vs. predicted cell counts

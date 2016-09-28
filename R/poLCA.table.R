@@ -31,7 +31,7 @@ function (formula, condition=NULL, lc) {
         }
         names(sel) <- names(y)
         yc <- expand.grid(sel)
-        predcell <- lc$N * (poLCA.ylik.C(poLCA.vectorize(lc$probs), yc) %*% lc$P)
+        predcell <- lc$N/.Machine$double.xmax * (poLCA.ylik.C(poLCA.vectorize(lc$probs), yc) %*% lc$P)
         if (ncol(mf) > 1) {
             ord <- 1 + (which(names(mf)[1] == names(y)) > which(names(mf)[2] == names(y)))
             if (grp) {

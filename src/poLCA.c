@@ -1,5 +1,7 @@
 #include "R.h"
 
+#define MAX_CLASSES 500  // Maximum number of latent classes
+
 // function: hello
 //    A little test
 void hello(void) {
@@ -25,7 +27,7 @@ void hello(void) {
 //            llik (double *): likelihood vector for the observation
 //
 void ylik(double *probs, int *y, int *obs, int *items,
-		  int *numChoices, int *classes, double *lik) {
+	  int *numChoices, int *classes, double *lik) {
 	int i,j,k;
 	const int citems = *items;
 	const int cclasses = *classes;
@@ -33,12 +35,12 @@ void ylik(double *probs, int *y, int *obs, int *items,
 	const double *firstprobs = probs;
 
 	for (i=0;i<cobs;i++) {
-		for (j=0;j<cclasses;j++) lik[j]=1.0;
+		for (j=0;j<cclasses;j++) lik[j] = DOUBLE_XMAX;
 		probs = (double *) firstprobs;
 		for (k=0;k<citems;k++) {
 			for (j=0;j<cclasses;j++) {
-				if (y[k]>0) lik[j] *= probs[y[k]-1];
-				probs += numChoices[k]; // move pointer to next item
+			   if (y[k]>0) lik[j] *= probs[y[k]-1];
+			   probs += numChoices[k]; // move pointer to next item
 			}
 		}
 		y += citems; // move pointer to next observation
@@ -68,7 +70,7 @@ void postclass(double *prior, double *probs, int *y,
                int *items, int *obs, int *numChoices,
                int *classes, double *posterior) {
 	int i,j,totalChoices;
-	double llik[500]; // Should probably calloc, limits num of classes to 500
+	double llik[MAX_CLASSES]; // Should probably calloc, limits num of classes0
 	double denom;
 	const int citems = *items;
 	const int cobs = *obs;
