@@ -1,5 +1,10 @@
 poLCA.posterior <-
 function(lc,y,x=NULL) {
+    if (is.vector(y) | any(dim(y)==1)) {
+        y <- matrix(y,nrow=1)
+    }
+    y[is.na(y)] <- 0
+
     if ((ncol(lc$x)>1) & (!is.null(x))) {
         prior <- poLCA.updatePrior(lc$coeff,x,length(lc$P))
     } else {
