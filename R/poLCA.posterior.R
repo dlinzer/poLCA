@@ -5,6 +5,11 @@ function(lc,y,x=NULL) {
     }
     y[is.na(y)] <- 0
 
+    if (!is.null(x)) {
+        if (is.vector(x)) x <- matrix(x,nrow=1)
+        x <- cbind(1,x)
+    }
+
     if ((ncol(lc$x)>1) & (!is.null(x))) {
         prior <- poLCA.updatePrior(lc$coeff,x,length(lc$P))
     } else {
