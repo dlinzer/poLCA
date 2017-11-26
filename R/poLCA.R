@@ -178,7 +178,7 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
             fit <- matrix(N/.Machine$double.xmax * (ylik %*% ret$P))
             ret$Chisq <- sum((freq-fit)^2/fit) + (N-sum(fit))
         }
-        ret$predcell <- data.frame(datacell,observed=freq,expected=round(fit,3)) # Table that gives observed vs. predicted cell counts
+        ret$predcell <- data.frame(datacell,observed=freq,expected=fit) # Table that gives observed vs. predicted cell counts
         ret$Gsq <- 2 * sum(freq*log(freq/fit))  # Likelihood ratio/deviance statistic
     }
     y[y==0] <- NA
