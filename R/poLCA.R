@@ -159,6 +159,7 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
     ret$npar <- (R*sum(K.j-1)) + (R-1)                  # number of degrees of freedom used by the model (number of estimated parameters)
     if (S>1) { ret$npar <- ret$npar + (S*(R-1)) - (R-1) }
     ret$aic <- (-2 * ret$llik) + (2 * ret$npar)         # Akaike Information Criterion
+    ret$aic3 <- (-2 * ret$llik) + (3 * ret$npar)        # Akaike Information Criterion 3
     ret$bic <- (-2 * ret$llik) + (log(N) * ret$npar)    # Schwarz-Bayesian Information Criterion
     ret$Nobs <- sum(rowSums(y==0)==0)                   # number of fully observed cases (if na.rm=F)
     if (all(rowSums(y==0)>0)) { # if no rows are fully observed
@@ -180,6 +181,9 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
         }
         ret$predcell <- data.frame(datacell,observed=freq,expected=round(fit,3)) # Table that gives observed vs. predicted cell counts
         ret$Gsq <- 2 * sum(freq*log(freq/fit))  # Likelihood ratio/deviance statistic
+        df <- max(K.j)^J - ret$npar - 1
+        ret$pValues.lrt <- 1 - pchisq(ret$Gsq, df)
+        ret$pValues.pchisqt <- 1 - pchisq(ret$Chisq, df)
     }
     y[y==0] <- NA
     ret$y <- data.frame(y)             # outcome variables
