@@ -54,6 +54,8 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{time}{length of time it took to run the model.}
 \item{npar}{number of degrees of freedom used by the model (estimated parameters).}
 \item{resid.df}{number of residual degrees of freedom.}
+\item{pValues.lrt}{Likelihood-Ratio-Test}
+\item{pValues.pchisqt}{Pearson-Chi-Square-Test}
 \item{attempts}{a vector containing the maximum log-likelihood values found in each of the \code{nrep} attempts to fit the model.}
 \item{eflag}{Logical, error flag. \code{TRUE} if estimation algorithm needed to automatically restart with new initial parameters. A restart is caused in the event of computational/rounding errors that result in nonsensical parameter estimates.}
 \item{probs.start}{A list of matrices containing the class-conditional response probabilities used as starting values in the estimation algorithm. If the algorithm needed to restart (see \code{eflag}), then this contains the starting values used for the final, successful, run.}
