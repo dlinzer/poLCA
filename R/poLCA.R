@@ -181,6 +181,9 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
         }
         ret$predcell <- data.frame(datacell,observed=freq,expected=round(fit,3)) # Table that gives observed vs. predicted cell counts
         ret$Gsq <- 2 * sum(freq*log(freq/fit))  # Likelihood ratio/deviance statistic
+        df <- max(K.j)^J - ret$npar - 1
+        ret$pValues.lrt <- 1 - pchisq(ret$Gsq, df)
+        ret$pValues.pchisqt <- 1 - pchisq(ret$Chisq, df)
     }
     y[y==0] <- NA
     ret$y <- data.frame(y)             # outcome variables
