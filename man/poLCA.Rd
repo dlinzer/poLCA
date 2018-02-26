@@ -47,6 +47,7 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{coeff.se}{standard errors of coefficient estimates on covariates (when estimated), in the same format as \code{coeff}.}
 \item{coeff.V}{covariance matrix of coefficient estimates on covariates (when estimated).}
 \item{aic}{Akaike Information Criterion.}
+\item{aic3}{Akaike Information Criterion 3.}
 \item{bic}{Bayesian Information Criterion.}
 \item{Gsq}{Likelihood ratio/deviance statistic.}
 \item{Chisq}{Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables.}
