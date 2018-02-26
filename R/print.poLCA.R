@@ -28,6 +28,7 @@ function(x, ...) {
     cat("maximum log-likelihood:", x$llik, "\n \n")
     cat("AIC(",R,"): ",x$aic,"\n",sep="")
     cat("BIC(",R,"): ",x$bic,"\n",sep="")
+    cat("SABIC(",R,"): ",x$sabic,"\n",sep="")
     if (S==1) cat("G^2(",R,"): ",x$Gsq," (Likelihood ratio/deviance statistic) \n",sep="")
     cat("X^2(",R,"): ",x$Chisq," (Chi-square goodness of fit) \n \n",sep="")
     if (x$numiter==x$maxiter) cat("ALERT: iterations finished, MAXIMUM LIKELIHOOD NOT FOUND \n \n")
