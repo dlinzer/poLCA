@@ -27,6 +27,7 @@ function(x, ...) {
     cat("residual degrees of freedom:", x$resid.df, "\n")
     cat("maximum log-likelihood:", x$llik, "\n \n")
     cat("AIC(",R,"): ",x$aic,"\n",sep="")
+    cat("CAIC(",R,"): ",x$caic,"\n",sep="")
     cat("BIC(",R,"): ",x$bic,"\n",sep="")
     if (S==1) cat("G^2(",R,"): ",x$Gsq," (Likelihood ratio/deviance statistic) \n",sep="")
     cat("X^2(",R,"): ",x$Chisq," (Chi-square goodness of fit) \n \n",sep="")
