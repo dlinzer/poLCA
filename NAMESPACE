@@ -11,5 +11,6 @@ S3method(print, poLCA)
 S3method(plot, poLCA)
 S3method(coef, poLCA)
 S3method(vcov, poLCA)
+importFrom(MASS, ginv)
 
 useDynLib(poLCA)
