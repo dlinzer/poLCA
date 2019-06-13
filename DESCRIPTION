@@ -14,3 +14,5 @@ URL: http://dlinzer.github.com/poLCA
 LazyLoad: yes
 NeedsCompilation: yes
 Packaged: 2016-06-04 16:53:43 UTC; jeff
+Imports:
+        MASS
