@@ -73,7 +73,7 @@ McLachlan, Geoffrey J. and Thriyambakam Krishnan. 1997. \emph{The EM Algorithm a
 
 The term "Latent class regression" (LCR) can have two meanings.  In this package, LCR models refer to latent class models in which the probability of class membership is predicted by one or more covariates.  However, in other contexts, LCR is also used to refer to regression models in which the manifest variable is partitioned into some specified number of latent classes as part of estimating the regression model. It is a way to simultaneously fit more than one regression to the data when the latent data partition is unknown. The \code{\link[flexmix:flexmix]{flexmix}} function in package \pkg{flexmix} will estimate this other type of LCR model.  Because of these terminology issues, the LCR models this package estimates are sometimes termed "latent class models with covariates" or "concomitant-variable latent class analysis," both of which are accurate descriptions of this model.
  
-A more detailed user's manual is available online at \url{http://userwww.service.emory.edu/~dlinzer/poLCA}.
+A more detailed presentation is available online at \url{https://www.jstatsoft.org/article/view/v042i10}.
 }
 \examples{
 ##

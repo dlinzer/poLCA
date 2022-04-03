@@ -13,9 +13,9 @@ poLCA uses expectation-maximization and Newton-Raphson algorithms to find maximu
 
 ## Package authors
 
-[Drew A. Linzer](http://votamatic.org/about-me)  
+[Drew A. Linzer](https://votamatic.org/about-me/)  
 
-[Jeffrey Lewis](http://www.sscnet.ucla.edu/polisci/faculty/lewis)  
+[Jeffrey Lewis](https://www.sscnet.ucla.edu/polisci/faculty/lewis/)  
 
 
 ## Installation
@@ -34,9 +34,9 @@ library(poLCA)
 
 to load the package into memory for use.
 
-poLCA is distributed through the Comprehensive R Archive Network, [CRAN](http://cran.r-project.org).  The compiled package source and MacOS and Windows binary files can be downloaded from http://cran.r-project.org/web/packages/poLCA.
+poLCA is distributed through the Comprehensive R Archive Network, [CRAN](https://cran.r-project.org).  The compiled package source and MacOS and Windows binary files can be downloaded from https://cran.r-project.org/web/packages/poLCA.
 
-The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixture Models](http://cran.r-project.org/web/views/Cluster.html), [Multivariate Statistics](http://cran.r-project.org/web/views/Multivariate.html), and [Psychometric Models and Methods](http://cran.r-project.org/web/views/Psychometrics.html). poLCA is provided free of charge, subject to version 2 of the GPL or any later version. 
+The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixture Models](https://CRAN.r-project.org?view=Cluster), and [Psychometric Models and Methods](https://CRAN.r-project.org?views=Psychometrics). poLCA is provided free of charge, subject to version 2 of the GPL or any later version. 
 
 
 ## Documentation
@@ -52,11 +52,11 @@ The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixt
 
 Users of poLCA are requested to cite the software package as:
 
-Linzer, Drew A. and Jeffrey Lewis. 2013. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.4. http://dlinzer.github.com/poLCA.
+Linzer, Drew A. and Jeffrey Lewis. 2013. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.4. https://dlinzer.github.com/poLCA.
 
 and
 
-Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Variable Latent Class Analysis." Journal of Statistical Software. 42(10): 1-29. http://www.jstatsoft.org/v42/i10
+Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Variable Latent Class Analysis." Journal of Statistical Software. 42(10): 1-29. https://www.jstatsoft.org/v42/i10
 
 
 ## Contact 
@@ -64,5 +64,5 @@ Linzer, Drew A. and Jeffrey Lewis. 2011. "poLCA: an R Package for Polytomous Var
 Please direct all inquiries, comments, and reports of bugs to drew@votamatic.org.
 
 
-[poLCA]: http://dlinzer.github.io/poLCA
-[R]: http://cran.r-project.org
+[poLCA]: https://dlinzer.github.io/poLCA/
+[R]: https://cran.r-project.org

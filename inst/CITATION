@@ -9,12 +9,12 @@ citEntry(entry = "Article",
   volume       = "42",
   number       = "10",
   pages        = "1--29",
-  url          = "http://www.jstatsoft.org/v42/i10/",
+  url          = "https://www.jstatsoft.org/v42/i10/",
 
   textVersion  =
   paste("Drew A. Linzer, Jeffrey B. Lewis (2011).",
         "poLCA: An R Package for Polytomous Variable Latent Class Analysis.",
         "Journal of Statistical Software, 42(10), 1-29.",
-        "URL http://www.jstatsoft.org/v42/i10/.")
+        "URL https://www.jstatsoft.org/v42/i10/")
 )
 
