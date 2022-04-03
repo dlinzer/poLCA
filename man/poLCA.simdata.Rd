@@ -34,11 +34,28 @@ poLCA.simdata(N = 5000, probs = NULL, nclass = 2, ndv = 4,
 \examples{
 # Create a sample data set with 3 classes and no covariates 
 # and run poLCA to recover the specified parameters.
-probs <- list(matrix(c(0.6,0.1,0.3,     0.6,0.3,0.1,     0.3,0.1,0.6    ),ncol=3,byrow=TRUE), # conditional resp prob to Y1
-              matrix(c(0.2,0.8,         0.7,0.3,         0.3,0.7        ),ncol=2,byrow=TRUE), # conditional resp prob to Y2
-              matrix(c(0.3,0.6,0.1,     0.1,0.3,0.6,     0.3,0.6,0.1    ),ncol=3,byrow=TRUE), # conditional resp prob to Y3
-              matrix(c(0.1,0.1,0.5,0.3, 0.5,0.3,0.1,0.1, 0.3,0.1,0.1,0.5),ncol=4,byrow=TRUE), # conditional resp prob to Y4
-              matrix(c(0.1,0.1,0.8,     0.1,0.8,0.1,     0.8,0.1,0.1    ),ncol=3,byrow=TRUE)) # conditional resp prob to Y5
+
+probs <- list(matrix(c(0.6, 0.1, 0.3,
+                       0.6, 0.3, 0.1,
+		       0.3, 0.1, 0.6),
+		     ncol = 3,byrow = TRUE), # conditional resp prob to Y1
+              matrix(c(0.2, 0.8,
+	               0.7, 0.3,
+		       0.3, 0.7),
+		     ncol = 2, byrow = TRUE), # conditional resp prob to Y2
+              matrix(c(0.3, 0.6, 0.1,
+	               0.1, 0.3, 0.6,
+		       0.3, 0.6, 0.1),
+		     ncol = 3,byrow = TRUE), # conditional resp prob to Y3
+              matrix(c(0.1, 0.1, 0.5, 0.3,
+	               0.5, 0.3, 0.1, 0.1,
+		       0.3, 0.1, 0.1, 0.5),
+		     ncol = 4,byrow = TRUE), # conditional resp prob to Y4
+              matrix(c(0.1, 0.1, 0.8,
+	               0.1, 0.8, 0.1,
+		       0.8, 0.1, 0.1),
+		     ncol = 3,
+		     byrow = TRUE)) # conditional resp prob to Y5
 simdat <- poLCA.simdata(N=1000,probs,P=c(0.2,0.3,0.5))
 f1 <- cbind(Y1,Y2,Y3,Y4,Y5)~1
 lc1 <- poLCA(f1,simdat$dat,nclass=3)

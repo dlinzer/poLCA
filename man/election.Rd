@@ -17,7 +17,7 @@ The data set also includes potential covariates \code{VOTE3}, the respondent's 2
 }
 \usage{data(election)}
 \format{A data frame with 1785 observations on 17 survey variables.  Of these, 1311 individuals provided responses on all twelve candidate evaluations.}
-\source{The National Election Studies (\url{http://www.electionstudies.org}). THE 2000 NATIONAL ELECTION STUDY [dataset]. Ann Arbor, MI: University of Michigan, Center for Political Studies [producer and distributor].}
+\source{The National Election Studies (\url{https://electionstudies.org/}). THE 2000 NATIONAL ELECTION STUDY [dataset]. Ann Arbor, MI: University of Michigan, Center for Political Studies [producer and distributor].}
 \examples{
 # Latent class models with one (loglinear independence) to three classes
 data(election)

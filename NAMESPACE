@@ -12,4 +12,10 @@ S3method(plot, poLCA)
 S3method(coef, poLCA)
 S3method(vcov, poLCA)
 
-useDynLib(poLCA)
+importFrom("graphics", "layout", "par")
+importFrom("stats", "model.frame", "model.matrix", "model.response",
+           "pt", "rnorm", "runif")
+importFrom("utils", "flush.console")
+importFrom("MASS", "ginv")
+importFrom("scatterplot3d", "scatterplot3d")
+useDynLib(poLCA, .registration = TRUE)
