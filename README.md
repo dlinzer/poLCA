@@ -52,7 +52,7 @@ The poLCA package appears in CRAN Task Views for [Cluster Analysis & Finite Mixt
 
 Users of poLCA are requested to cite the software package as:
 
-Linzer, Drew A. and Jeffrey Lewis. 2013. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.4. https://dlinzer.github.com/poLCA.
+Linzer, Drew A. and Jeffrey Lewis. 2022. "poLCA: Polytomous Variable Latent Class Analysis." R package version 1.6. https://dlinzer.github.com/poLCA.
 
 and
 
