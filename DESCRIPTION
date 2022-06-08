@@ -14,3 +14,5 @@ URL: https://github.com/dlinzer/poLCA
 LazyLoad: yes
 NeedsCompilation: yes
 Packaged: 2016-06-04 16:53:43 UTC; jeff
+Suggests: testthat
+RoxygenNote: 6.0.1
