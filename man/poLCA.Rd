@@ -48,6 +48,7 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{coeff.V}{covariance matrix of coefficient estimates on covariates (when estimated).}
 \item{aic}{Akaike Information Criterion.}
 \item{bic}{Bayesian Information Criterion.}
+\item{sabic}{Sample-Size adjusted Bayesian Information Criterion.}
 \item{Gsq}{Likelihood ratio/deviance statistic.}
 \item{Chisq}{Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables.}
 \item{time}{length of time it took to run the model.}
