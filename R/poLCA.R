@@ -159,6 +159,7 @@ function(formula,data,nclass=2,maxiter=1000,graphs=FALSE,tol=1e-10,
     ret$npar <- (R*sum(K.j-1)) + (R-1)                  # number of degrees of freedom used by the model (number of estimated parameters)
     if (S>1) { ret$npar <- ret$npar + (S*(R-1)) - (R-1) }
     ret$aic <- (-2 * ret$llik) + (2 * ret$npar)         # Akaike Information Criterion
+    ret$caic <- (-2 * ret$llik) + ret$npar(log(N) + 1)
     ret$bic <- (-2 * ret$llik) + (log(N) * ret$npar)    # Schwarz-Bayesian Information Criterion
     ret$Nobs <- sum(rowSums(y==0)==0)                   # number of fully observed cases (if na.rm=F)
     if (all(rowSums(y==0)>0)) { # if no rows are fully observed
