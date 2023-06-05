@@ -11,6 +11,7 @@ S3method(print, poLCA)
 S3method(plot, poLCA)
 S3method(coef, poLCA)
 S3method(vcov, poLCA)
+importFrom(MASS, ginv)
 
 importFrom("graphics", "layout", "par")
 importFrom("stats", "model.frame", "model.matrix", "model.response",
