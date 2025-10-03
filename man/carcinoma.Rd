@@ -5,7 +5,7 @@
 \description{Dichotomous ratings by seven pathologists of 118 slides for the presence or absence of carcinoma in the uterine cervix. Pathologists are labeled \code{A} through \code{G}. There were 20 different observed response patterns. This data set appears in Agresti (2002, p. 542) as Table 13.1.}
 \usage{data(carcinoma)}
 \format{A data frame with 118 observations on 7 variables representing pathologist ratings with 1 denoting "no" and 2 denoting "yes".}
-\source{Agresti, Alan. 2002. \emph{Categorical Data Analysis, second edition}. Hoboken: John Wiley \& Sons.}
+\source{Agresti, Alan. 2002. \emph{Categorical Data Analysis, second edition}. Hoboken: John Wiley & Sons.}
 \examples{
 ##
 ## Replication of latent class models in Agresti (2002, p. 543), 
