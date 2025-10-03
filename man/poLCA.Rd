@@ -60,13 +60,13 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{call}{function call to \code{poLCA}.}
 }
 \references{
-Agresti, Alan. 2002. \emph{Categorical Data Analysis, second edition}. Hoboken: John Wiley \& Sons.
+Agresti, Alan. 2002. \emph{Categorical Data Analysis, second edition}. Hoboken: John Wiley & Sons.
 
 Bandeen-Roche, Karen, Diana L. Miglioretti, Scott L. Zeger, and Paul J. Rathouz. 1997. "Latent Variable Regression for Multiple Discrete Outcomes." \emph{Journal of the American Statistical Association}. 92(440): 1375-1386.
  
 Hagenaars, Jacques A. and Allan L. McCutcheon, eds. 2002. \emph{Applied Latent Class Analysis}. Cambridge: Cambridge University Press.
  
-McLachlan, Geoffrey J. and Thriyambakam Krishnan. 1997. \emph{The EM Algorithm and Extensions}. New York: John Wiley \& Sons.
+McLachlan, Geoffrey J. and Thriyambakam Krishnan. 1997. \emph{The EM Algorithm and Extensions}. New York: John Wiley & Sons.
 }
 \note{
 \code{poLCA} uses EM and Newton-Raphson algorithms to maximize the latent class model log-likelihood function. Depending on the starting parameters, this algorithm may only locate a local, rather than global, maximum. This becomes more and more of a problem as \code{nclass} increases. It is therefore highly advisable to run \code{poLCA} multiple times until you are relatively certain that you have located the global maximum log-likelihood. As long as \code{probs.start=NULL}, each function call will use different (random) initial starting parameters.  Alternatively, setting \code{nrep} to a value greater than one enables the user to estimate the latent class model multiple times with a single call to \code{poLCA}, thus conducting the search for the global maximizer automatically.
