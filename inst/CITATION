@@ -1,9 +1,11 @@
-citHeader("To cite poLCA in publications use:")
+## R package reference generated from DESCRIPTION metadata
+citation(auto = meta)
 
-citEntry(entry = "Article",
+## JSS Article
+bibentry(bibtype = "Article",
   title        = "{poLCA}: An {R} Package for Polytomous Variable Latent Class Analysis",
-  author       = personList(as.person("Drew A. Linzer"),
-                   as.person("Jeffrey B. Lewis")),
+  author       = c(person(c("Drew", "A."), "Linzer"),
+                   person(c("Jeffrey", "B."), "Lewis")),
   journal      = "Journal of Statistical Software",
   year         = "2011",
   volume       = "42",
