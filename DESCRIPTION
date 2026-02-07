@@ -1,6 +1,6 @@
 Package: poLCA
-Version: 1.6.0
-Date: 2022-04-02
+Version: 1.6.0.2
+Date: 2026-02-07
 Title: Polytomous Variable Latent Class Analysis
 Authors@R: c(person(given = "Drew",
                     family = "Linzer",
