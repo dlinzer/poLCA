@@ -15,7 +15,7 @@ poLCA uses expectation-maximization and Newton-Raphson algorithms to find maximu
 
 [Drew A. Linzer](https://votamatic.org/about-me/)  
 
-[Jeffrey Lewis](https://www.sscnet.ucla.edu/polisci/faculty/lewis/)  
+[Jeffrey Lewis](https://polisci.ucla.edu/person/jeffrey-b-lewis/)  
 
 
 ## Installation
