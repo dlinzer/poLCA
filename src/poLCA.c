@@ -35,7 +35,7 @@ void ylik(double *probs, int *y, int *obs, int *items,
 	const double *firstprobs = probs;
 
 	for (i=0;i<cobs;i++) {
-		for (j=0;j<cclasses;j++) lik[j] = DOUBLE_XMAX;
+		for (j=0;j<cclasses;j++) lik[j] = DBL_MAX;
 		probs = (double *) firstprobs;
 		for (k=0;k<citems;k++) {
 			for (j=0;j<cclasses;j++) {
