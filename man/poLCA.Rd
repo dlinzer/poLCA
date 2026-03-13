@@ -49,7 +49,9 @@ Model specification: Latent class models have more than one manifest variable, s
 \item{aic}{Akaike Information Criterion.}
 \item{bic}{Bayesian Information Criterion.}
 \item{Gsq}{Likelihood ratio/deviance statistic.}
-\item{Chisq}{Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables.}
+\item{Gsq.pvalue}{Likelihood ratio/deviance statistic.}
+\item{Chisq}{Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables p-value.}
+\item{Chisq.pvalue}{Pearson Chi-square goodness of fit statistic for fitted vs. observed multiway tables p-value.}
 \item{time}{length of time it took to run the model.}
 \item{npar}{number of degrees of freedom used by the model (estimated parameters).}
 \item{resid.df}{number of residual degrees of freedom.}
